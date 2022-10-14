@@ -28,12 +28,12 @@ public class HashMapTester {
 
 	public static void main(String[] args) {
 		HashMapTask helper = new HashMapTask();
-		HashMapTester testerobj = new HashMapTester();
-		String carryon = "";
-		Map given = helper.getHashMap();
+		HashMapTester testerObj = new HashMapTester();
+		String carryOn = "";
+		Map<String,String> given = helper.getHashMap();
 		do {
 			System.out.println("ENTER THE QUESTION NO :: ");
-			int question = testerobj.toCheckInt();
+			int question = testerObj.toCheckInt();
 
 			try {
 				switch (question) {
@@ -45,14 +45,14 @@ public class HashMapTester {
 				}
 				case 2:{
 					System.out.println("enter the no. of pair strings ::");
-					int countkey = testerobj.toCheckInt();
+					int countkey = testerObj.toCheckInt();
 					
 					for(int i=0;i<countkey;i++) {
 						System.out.println("enter the key string "+i+"::");
 						String key=scan.next();
 						System.out.println("enter the value string "+i+"::");
 						String value=scan.next();	
-							helper.AddInputs(given, key, value);
+							helper.AddStrInputs(given, key, value);
 					}
 							System.out.println("the output map is ::"+given);
 							System.out.println("the size of the map is ::"+helper.getLengthHMap(given));
@@ -60,14 +60,14 @@ public class HashMapTester {
 				}			
 				case 3:{
 					System.out.println("enter the no. of pair integers ::");
-					int countkey = testerobj.toCheckInt();
-					
+					int countkey = testerObj.toCheckInt();
+					Map<Integer,Integer> givenMap = helper.getHashMap();
 					for(int i=0;i<countkey;i++) {
 						System.out.println("enter the key integer "+i+"::");
-						int key= testerobj.toCheckInt();
+						int key= testerObj.toCheckInt();
 						System.out.println("enter the value integer "+i+"::");
-						int value =testerobj.toCheckInt();	
-							helper.AddInputs(given, key, value);
+						int value =testerObj.toCheckInt();	
+							helper.AddIntInputs(givenMap, key, value);
 					}
 							System.out.println("the output map is ::"+given);
 							System.out.println("the size of the map is ::"+helper.getLengthHMap(given));
@@ -75,14 +75,14 @@ public class HashMapTester {
 				}			
 				case 4:{
 					System.out.println("enter the no. of pair in the map ::");
-					int countkey = testerobj.toCheckInt();
-					
+					int countkey = testerObj.toCheckInt();
+					Map<String,Integer> givenMap = helper.getHashMap();
 					for(int i=0;i<countkey;i++) {
 						System.out.println("enter the key string "+i+"::");
 						String key= scan.next();
 						System.out.println("enter the value integer "+i+"::");
-						int value =testerobj.toCheckInt();	
-							helper.AddInputs(given, key, value);
+						int value =testerObj.toCheckInt();	
+							helper.AddInputs(givenMap, key, value);
 					}
 							System.out.println("the output map is ::"+given);
 							System.out.println("the size of the map is ::"+helper.getLengthHMap(given));
@@ -90,13 +90,13 @@ public class HashMapTester {
 				}
 				case 5:{
 					System.out.println("enter the no. of pair in the map ::");
-					int countkey = testerobj.toCheckInt();
-					
+					int countkey = testerObj.toCheckInt();
+					Map<String,Object> givenMap = helper.getHashMap();
 					for(int i=0;i<countkey;i++) {
 						System.out.println("enter the key string "+i+"::");
 						String key= scan.next();
 						Object value = helper;	
-							helper.AddInputs(given, key, value);
+							helper.AddObjInputs(givenMap, key, value);
 					}
 							System.out.println("the output map is ::"+given);
 							System.out.println("the size of the map is ::"+helper.getLengthHMap(given));
@@ -107,16 +107,16 @@ public class HashMapTester {
 					String key=scan.next();
 					System.out.println("enter the value string 1::");
 					String value=scan.next();	
-						helper.AddInputs(given, key, value);
+						helper.AddStrInputs(given, key, value);
 					System.out.println("enter the key string 2::");
 					String key1=scan.next();
 					String value1=null;	
-							helper.AddInputs(given, key1, value1);
+							helper.AddStrInputs(given, key1, value1);
 					System.out.println("enter the key string 3::");
 					String key2=scan.next();
 					System.out.println("enter the value string 3::");
 					String value2=scan.next();	
-							helper.AddInputs(given, key2, value2);
+							helper.AddStrInputs(given, key2, value2);
 							System.out.println("the output map is ::"+given);
 							System.out.println("the size of the map is ::"+helper.getLengthHMap(given));
 				break;
@@ -127,29 +127,30 @@ public class HashMapTester {
 					String key=scan.next();
 					System.out.println("enter the value string 1::");
 					String value=scan.next();	
-						helper.AddInputs(given, key, value);
+						helper.AddStrInputs(given, key, value);
 					String key1=null;
 					System.out.println("enter the value string 2::");
 					String value1=scan.next();	
-							helper.AddInputs(given, key1, value1);
+							helper.AddStrInputs(given, key1, value1);
 					System.out.println("enter the key string 3::");
 					String key2=scan.next();
 					System.out.println("enter the value string 3::");
 					String value2=scan.next();	
-							helper.AddInputs(given, key2, value2);
+							helper.AddStrInputs(given, key2, value2);
 							System.out.println("the output map is ::"+given);
 							System.out.println("the size of the map is ::"+helper.getLengthHMap(given));
 				break;
 				}
 				case 8:{
+					Map<String,Integer> givenMap = helper.getHashMap();
 					System.out.println("enter the no. of pair in the map ::");
-					int countkey = testerobj.toCheckInt();
+					int countkey = testerObj.toCheckInt();
 					for(int i=0;i<countkey;i++) {
 						System.out.println("enter the key string "+i+"::");
 						String key= scan.next();
 						System.out.println("enter the value integer "+i+"::");
-						int value =testerobj.toCheckInt();	
-							helper.AddInputs(given, key, value);
+						int value =testerObj.toCheckInt();	
+							helper.AddInputs(givenMap, key, value);
 					}
 					System.out.println("enter the key you want to check ::");
 					String checkKey = scan.next();
@@ -158,30 +159,31 @@ public class HashMapTester {
 				break;
 				}
 				case 9:{
+					Map<String,Integer> givenMap = helper.getHashMap();
 					System.out.println("enter the no. of pair in the map ::");
-					int countkey = testerobj.toCheckInt();
+					int countkey = testerObj.toCheckInt();
 					for(int i=0;i<countkey;i++) {
 						System.out.println("enter the key string "+i+"::");
 						String key= scan.next();
 						System.out.println("enter the value integer "+i+"::");
-						int value =testerobj.toCheckInt();	
-							helper.AddInputs(given, key, value);
+						int value =testerObj.toCheckInt();	
+							helper.AddInputs(givenMap, key, value);
 					}
 					System.out.println("enter the value you want to check ::");
-					int checkValue = testerobj.toCheckInt();
+					int checkValue = testerObj.toCheckInt();
 					boolean output = helper.checkValue(given, checkValue);
 					System.out.println("the key is present in the hashmap ::"+output);
 				break;
 				}
 				case 10:{
 					System.out.println("enter the no. of pair strings ::");
-					int countkey = testerobj.toCheckInt();
+					int countkey = testerObj.toCheckInt();
 					for(int i=0;i<countkey;i++) {
 						System.out.println("enter the key string "+i+"::");
 						String key=scan.next();
 						System.out.println("enter the value string "+i+"::");
 						String value=scan.next();	
-							helper.AddInputs(given, key, value);
+							helper.AddStrInputs(given, key, value);
 					}
 							System.out.println("the output map is ::"+given);
 							for(int j=0;j<countkey;j++) {
@@ -196,14 +198,16 @@ public class HashMapTester {
 				break;
 				}
 				case 11:{
+					
 					System.out.println("enter the no. of pair in the map ::");
-					int countkey = testerobj.toCheckInt();
+					int countkey = testerObj.toCheckInt();
 					for(int i=0;i<countkey;i++) {
 						System.out.println("enter the key string "+i+"::");
 						String key= scan.next();
-						System.out.println("enter the value integer "+i+"::");
+						System.out.println("enter the value String "+i+"::");
 						String value =scan.next();	
-							helper.AddInputs(given, key, value);
+						helper.AddStrInputs(given, key, value);
+							
 					}
 					System.out.println("the output map is ::"+given);
 					System.out.println("enter the key you want the the value of ::");
@@ -214,13 +218,13 @@ public class HashMapTester {
 				}
 				case 12:{
 					System.out.println("enter the no. of pair in the map ::");
-					int countkey = testerobj.toCheckInt();
+					int countkey = testerObj.toCheckInt();
 					for(int i=0;i<countkey;i++) {
 						System.out.println("enter the key string "+i+"::");
 						String key= scan.next();
-						System.out.println("enter the value integer "+i+"::");
+						System.out.println("enter the value String "+i+"::");
 						String value =scan.next();	
-							helper.AddInputs(given, key, value);
+							helper.AddStrInputs(given, key, value);
 					}
 					System.out.println("the output map is ::"+given);
 					System.out.println("enter the key you want the the value of ::");
@@ -231,13 +235,13 @@ public class HashMapTester {
 				}
 				case 13:{
 					System.out.println("enter the no. of pair in the map ::");
-					int countkey = testerobj.toCheckInt();
+					int countkey = testerObj.toCheckInt();
 					for(int i=0;i<countkey;i++) {
 						System.out.println("enter the key string "+i+"::");
 						String key= scan.next();
-						System.out.println("enter the value integer "+i+"::");
+						System.out.println("enter the value string "+i+"::");
 						String value =scan.next();	
-							helper.AddInputs(given, key, value);
+							helper.AddStrInputs(given, key, value);
 					}
 					System.out.println("the output map is ::"+given);
 					System.out.println("the size of the map is ::"+helper.getLengthHMap(given));
@@ -251,13 +255,13 @@ public class HashMapTester {
 				}
 				case 14:{
 					System.out.println("enter the no. of pair in the map ::");
-					int countkey = testerobj.toCheckInt();
+					int countkey = testerObj.toCheckInt();
 					for(int i=0;i<countkey;i++) {
 						System.out.println("enter the key string "+i+"::");
 						String key= scan.next();
-						System.out.println("enter the value integer "+i+"::");
+						System.out.println("enter the value string "+i+"::");
 						String value =scan.next();	
-							helper.AddInputs(given, key, value);
+							helper.AddStrInputs(given, key, value);
 					}
 					System.out.println("the output map is ::"+given);
 					System.out.println("the size of the map is ::"+helper.getLengthHMap(given));
@@ -270,13 +274,13 @@ public class HashMapTester {
 				}
 				case 15:{
 					System.out.println("enter the no. of pair in the map ::");
-					int countkey = testerobj.toCheckInt();
+					int countkey = testerObj.toCheckInt();
 					for(int i=0;i<countkey;i++) {
 						System.out.println("enter the key string "+i+"::");
 						String key= scan.next();
-						System.out.println("enter the value integer "+i+"::");
+						System.out.println("enter the value string "+i+"::");
 						String value =scan.next();	
-							helper.AddInputs(given, key, value);
+							helper.AddStrInputs(given, key, value);
 					}
 					System.out.println("the output map is ::"+given);
 					System.out.println("the size of the map is ::"+helper.getLengthHMap(given));
@@ -292,16 +296,16 @@ public class HashMapTester {
 				}
 				case 16:{
 					System.out.println("enter the no. of pair strings ::");
-					int countKey = testerobj.toCheckInt();
+					int countKey = testerObj.toCheckInt();
 					for(int i=0;i<countKey;i++) {
 						System.out.println("enter the key string "+i+"::");
 						String key=scan.next();
 						System.out.println("enter the value string "+i+"::");
 						String value=scan.next();	
-							helper.AddInputs(given, key, value);
+							helper.AddStrInputs(given, key, value);
 					}System.out.println("the output map is ::"+given);
 					System.out.println("enter the no. of values u want to replace ::");
-					int countKeyReplace = testerobj.toCheckInt(); 
+					int countKeyReplace = testerObj.toCheckInt(); 
 							for(int j=0;j<countKeyReplace;j++) {
 								System.out.println("enter the key string "+j+"::");
 								String key=scan.next();
@@ -315,17 +319,17 @@ public class HashMapTester {
 				}
 				case 17:{
 					System.out.println("enter the no. of pair strings ::");
-					int countKey = testerobj.toCheckInt();
+					int countKey = testerObj.toCheckInt();
 					for(int i=0;i<countKey;i++) {
 						System.out.println("enter the key string "+i+"::");
 						String key=scan.next();
 						System.out.println("enter the value string "+i+"::");
 						String value=scan.next();	
-							helper.AddInputs(given, key, value);
+							helper.AddStrInputs(given, key, value);
 					}
 					System.out.println("the output map is ::"+given);
 					System.out.println("enter the no. of values u want to replace ::");
-					int countKeyReplace = testerobj.toCheckInt(); 
+					int countKeyReplace = testerObj.toCheckInt(); 
 							for(int j=0;j<countKeyReplace;j++) {
 								System.out.println("enter the key string "+j+"::");
 								String key=scan.next();
@@ -341,25 +345,25 @@ public class HashMapTester {
 				}
 				case 18:{
 					System.out.println("enter the no. of pair of inputs ::");
-					int countKey = testerobj.toCheckInt();
+					int countKey = testerObj.toCheckInt();
 					for(int i=0;i<countKey;i++) {
 						System.out.println("enter the key string "+i+"::");
 						String key=scan.next();
 						System.out.println("enter the value string "+i+"::");
 						String value=scan.next();	
-							helper.AddInputs(given, key, value);
+							helper.AddStrInputs(given, key, value);
 					}
 							System.out.println("the output map is ::"+given);
 							System.out.println("the size of the map is ::"+helper.getLengthHMap(given));
 							System.out.println("enter the no. of pair of input for the map2 ::");
 							Map input = helper.getHashMap();
-							int countKey1 = testerobj.toCheckInt();
+							int countKey1 = testerObj.toCheckInt();
 							for(int j=0;j<countKey1;j++) {
 								System.out.println("enter the key string "+j+"::");
 								String key1=scan.next();
 								System.out.println("enter the value string "+j+"::");
 								String value1=scan.next();	
-								helper.AddInputs(input, key1, value1);
+								helper.AddStrInputs(input, key1, value1);
 							}
 									System.out.println("the output map is ::"+input);
 									System.out.println("the size of the map is ::"+helper.getLengthHMap(input));
@@ -370,14 +374,14 @@ public class HashMapTester {
 							}
 				case 19:{
 					System.out.println("enter the no. of pair strings ::");
-					int countkey = testerobj.toCheckInt();
+					int countkey = testerObj.toCheckInt();
 					
 					for(int i=0;i<countkey;i++) {
 						System.out.println("enter the key string "+i+"::");
 						String key=scan.next();
 						System.out.println("enter the value string "+i+"::");
 						String value=scan.next();	
-							helper.AddInputs(given, key, value);
+							helper.AddStrInputs(given, key, value);
 					}
 					System.out.println("the output map is ::"+given);
 					helper.iterateMap(given);
@@ -386,14 +390,14 @@ public class HashMapTester {
 				}	
 				case 20:{
 					System.out.println("enter the no. of pair strings ::");
-					int countkey = testerobj.toCheckInt();
+					int countkey = testerObj.toCheckInt();
 					
 					for(int i=0;i<countkey;i++) {
 						System.out.println("enter the key string "+i+"::");
 						String key=scan.next();
 						System.out.println("enter the value string "+i+"::");
 						String value=scan.next();	
-							helper.AddInputs(given, key, value);
+							helper.AddStrInputs(given, key, value);
 					}
 					System.out.println("the output map is ::"+given);
 					helper.eraseAll(given);
@@ -411,8 +415,8 @@ public class HashMapTester {
 				System.out.println(ex.getMessage());
 			}
 			System.out.print("Do you want to continuation yes/no ::");
-			carryon = scan.next();
+			carryOn = scan.next();
 		}
 
-	while(carryon.equals("yes"));
+	while(carryOn.equals("yes"));
 }}

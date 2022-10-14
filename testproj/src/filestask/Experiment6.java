@@ -21,8 +21,7 @@ public String getGiven() {
 public void setGiven(String given) {
 	this.given = given;
 }
-public String toString() {
-	return given+" "+number;
+ public String toString() {//swami resolved
+return given+number;	
 }
-
 }
